@@ -12,6 +12,8 @@ public class VerificadorService {
         HashMap<String, Integer> map = getHashMapNumeros(romano, listaChar);
 
         Set<String> chaves = map.keySet();
+
+        // verifica a qtd de cada letra usada
         for (String chave : chaves) {
             Integer qtd = map.get(chave);
 
@@ -28,6 +30,7 @@ public class VerificadorService {
         ConverterService converter = new ConverterService();
         Character[] listaChar = converter.getCharacters(romano);
 
+        // verifica se as letras inseridas são validas
         for (char ch : listaChar) {
             Integer cont = 0;
 
@@ -67,6 +70,7 @@ public class VerificadorService {
         Integer cont = 0;
         HashMap<String,Integer> map = new HashMap<>();
 
+        // cria um hashmap das letras e a qtd
         while (cont < romano.length()) {
             Integer qtd = map.get(listaChar[cont].toString());
 

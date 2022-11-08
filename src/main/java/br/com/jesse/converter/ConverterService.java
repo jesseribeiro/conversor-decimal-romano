@@ -28,11 +28,16 @@ public class ConverterService {
         Integer cont = 0;
         String compara;
 
+
         while (cont < romano.length()) {
             Integer i = 0;
             Boolean encontrouValor = false;
+
+            // verifica o numero de caracteres para calcular
             if (romano.length() - cont >= 2) {
                 for (String str : listaRomano) {
+
+                    // pega dois caracteres e verifica se existe nos romanos
                     compara = listaChar[cont] + "" + listaChar[cont+1];
                     if (compara.equalsIgnoreCase(str)) {
                         valor += listaDecimal[i];
@@ -42,6 +47,7 @@ public class ConverterService {
                     }
                     i++;
                 }
+                // se não encontra, ele pega apenas um caracter
                 if (!encontrouValor) {
                     i = 0;
                     for (String str : listaRomano) {
@@ -77,6 +83,7 @@ public class ConverterService {
         Integer ultimoValor = 1000;
         String compara;
 
+        // verifica se o número romano existe
         while (cont < romano.length()) {
             Integer i = 0;
             Boolean encontrouValor = false;
