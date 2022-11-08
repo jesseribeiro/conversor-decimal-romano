@@ -12,7 +12,6 @@ No final retorna também uma estatística de quantas letras foram usadas.
 Após acessar a pasta local do projeto,
 
 Comandos para compilar maven e executar:
- - acessar a pasta onde está o programa java
  - mvn clean install -DskipTests
  - cd target
  - java -jar .\idbrasil-0.0.1-SNAPSHOT.jar
